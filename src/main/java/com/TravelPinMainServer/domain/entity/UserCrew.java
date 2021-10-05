@@ -9,11 +9,11 @@ public class UserCrew {
     @Column(name="user_crew_id")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="crew_id")
     private Crew crew;
 
